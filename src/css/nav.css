@@ -1,0 +1,114 @@
+@font-face {
+    font-family: neuemontreal;
+    src: url('../fonts/Neue\ Montreal/NeueMontreal-Regular.otf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'neuemontreal', sans-serif;
+}
+
+.nav-ul-mobile{
+    display: none;
+    flex-direction: column;
+    list-style: none;
+    gap: 20px;
+    padding: 20px;
+    position: fixed;
+    height: 25vh;
+    top: 0; /* Adjust based on your navbar height */
+    right: 0;
+    align-items: flex-end;
+    background-color: #fffffff9; /* Adjust based on your navbar background */
+    width: 100%; /* Adjust based on your design */
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    /* transform: translateX(100%); Start off-screen */
+    opacity: 1; /* Start invisible */
+    scroll-behavior: none;
+    z-index: 999;
+}
+
+
+.navbar {
+    width:100%;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    color: white;
+    transition: transform 0.4s ease-out;
+}
+
+nav > p{
+    font-size: x-large;
+    margin-left: 200px;
+    text-align: center;
+}
+
+nav > ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+li > a {
+    text-decoration: none;
+    font-size: medium;
+    color: white;
+}
+
+#home,
+.about,
+.contact-us {
+    scroll-margin-top: 90px;
+}
+
+.navbar.show {
+  transform: translateY(0);
+}
+
+/* Slide out of view (equal to navbar height) */
+.navbar.hide {
+  transform: translateY(-300px); 
+}
+
+.nav-transparent {
+  background-color: transparent;
+  transform: translateY(0);
+}
+
+.nav-colored {
+  background-color: #ffffffa5; 
+  color: black;
+}
+
+.link-colored{
+    color: white;
+}
+.link-black{
+    color: black;
+}
+
+.menu-button{
+    display:none;
+}
+@media screen and (max-width: 800px) {
+    .hideOnMobile {
+        display: none;
+    }
+    .menu-button{
+        display:block;
+    }
+    nav > p{
+        margin-left: 50px;
+    }
+}
+
+@media screen and (max-width:320px){
+    nav > p{
+        margin-left: 20px;
+    }
+}

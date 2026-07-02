@@ -1,0 +1,94 @@
+.list {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    height: 650px;
+    gap: 10px;
+    margin-bottom: 50px;
+}
+
+.list>section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 25%;
+    height: 650px;
+}
+.list > section > p{
+    font-size: large;
+}
+
+.list > section > div{
+    width: 100%;
+    height: 600px;
+    background-position: center;
+    background-size: 100% 100%;
+}
+
+@media screen and (min-width:2560px) {
+    .list {
+        margin-bottom: 150px;
+    }
+    .list > section{
+        height: 900px;
+    }
+}
+
+@media screen and (max-width:1440px) {
+    .list{
+        height: 600px;
+    }
+    .list > section{
+        height: 600px;
+    }
+    .list > section > div{
+        height: 450px;
+    }
+}
+
+@media screen and (max-width:1024px) {
+    .list{
+        height: 500px;
+    }
+    .list > section{
+        height: 500px;
+    }
+    .list > section > div{
+        height: 380px;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .list{
+        width: 100%;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        height: 900px;
+        gap: 0px;
+    }
+    .list > section{
+        width: 40%;
+        height: 450px;
+        gap: 5px;
+    }
+    .list > section > div{
+        height: 350px;
+    }
+}
+
+@media screen and (max-width:425px) {
+    .list{
+        height: 1500px;
+        gap:30px;
+    }
+    .list > section > div{
+        height: 450px;
+    }
+    .list>section{
+        width: 90%;
+        padding: 10px;
+        border-radius: 25px;
+        border: 1px solid #000
+    }
+}
