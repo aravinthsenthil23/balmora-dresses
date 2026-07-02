@@ -1,14 +1,30 @@
-import { use, useState } from 'react'
+import { useState } from 'react'
 import '../css/grid.css'
+
+const hatImages = {
+    darkbluecap: new URL('../assets/darkbluecap.png', import.meta.url).href,
+    darkgraycap: new URL('../assets/darkgraycap.png', import.meta.url).href,
+    sandalcap: new URL('../assets/sandalcap.png', import.meta.url).href,
+    redcap: new URL('../assets/redcap.png', import.meta.url).href,
+    greencap: new URL('../assets/greencap.png', import.meta.url).href,
+    darkblue: new URL('../assets/darkblue.png', import.meta.url).href,
+    blackbalmoral: new URL('../assets/black-balmoral.png', import.meta.url).href,
+    bluetop: new URL('../assets/bluetop.png', import.meta.url).href,
+    sandaltop: new URL('../assets/sandaltop.png', import.meta.url).href,
+    blackfullhand: new URL('../assets/blackfullhand.png', import.meta.url).href,
+    bluefullhand: new URL('../assets/bluefullhand.png', import.meta.url).href,
+    sandalfullhand: new URL('../assets/sandalfullhand.png', import.meta.url).href
+}
+
 export default function HatAndTshirts() {
     let [isOver, setOver] = useState(false);
     let [isOver1, setOver1] = useState(false);
     let [isOver2, setOver2] = useState(false);
     let [isOver3, setOver3] = useState(false);
-    let [img, setimg1] = useState("src/assets/darkbluecap.png")
-    let [img2, setimg2] = useState("src/assets/sandalcap.png")
-    let [img3, setimg3] = useState("src/assets/black-balmoral.png")
-    let [img4, setimg4] = useState("src/assets/blackfullhand.png")
+    let [img, setimg1] = useState(hatImages.darkbluecap)
+    let [img2, setimg2] = useState(hatImages.sandalcap)
+    let [img3, setimg3] = useState(hatImages.blackbalmoral)
+    let [img4, setimg4] = useState(hatImages.blackfullhand)
     return (
         <div className="grid-layout-1">
             <div className='item1'>
@@ -26,8 +42,8 @@ export default function HatAndTshirts() {
                     <p>Somerville 4-Panel Hat<br />
                         $65.00 USD</p>
                     <div className='colors'>
-                        <span onClick={() => setimg1("src/assets/darkbluecap.png")} style={{ backgroundColor: "#1E1E4C" }}></span>
-                        <span onClick={() => setimg1("src/assets/darkgraycap.png")}
+                        <span onClick={() => setimg1(hatImages.darkbluecap)} style={{ backgroundColor: "#1E1E4C" }}></span>
+                        <span onClick={() => setimg1(hatImages.darkgraycap)}
                             style={{ backgroundColor: "#575757" }}></span>
                     </div>
                 </div>}
@@ -37,10 +53,10 @@ export default function HatAndTshirts() {
                     <p>Aberdeen 6-Panel Hat<br />
                         $65.00 USD</p>
                     <div className='colors'>
-                        <span onClick={() => setimg2("src/assets/sandalcap.png")} style={{ backgroundColor: "#EAE1C3" }}></span>
-                        <span onClick={() => setimg2("src/assets/redcap.png")} style={{ backgroundColor: "#C11111" }}></span>
-                        <span onClick={() => setimg2("src/assets/greencap.png")} style={{ backgroundColor: "#123005" }}></span>
-                        <span onClick={() => setimg2("src/assets/darkblue.png")} style={{ backgroundColor: "#1E1E4C" }}></span>
+                        <span onClick={() => setimg2(hatImages.sandalcap)} style={{ backgroundColor: "#EAE1C3" }}></span>
+                        <span onClick={() => setimg2(hatImages.redcap)} style={{ backgroundColor: "#C11111" }}></span>
+                        <span onClick={() => setimg2(hatImages.greencap)} style={{ backgroundColor: "#123005" }}></span>
+                        <span onClick={() => setimg2(hatImages.darkblue)} style={{ backgroundColor: "#1E1E4C" }}></span>
                     </div>
                 </div>
             </div>
@@ -49,9 +65,9 @@ export default function HatAndTshirts() {
                     <p>Oakwood Tank Top<br />
                         $120.00 USD</p>
                     <div className='colors'>
-                        <span onClick={() => setimg3("src/assets/black-balmoral.png")} style={{ backgroundColor: "#000000" }}></span>
-                        <span onClick={() => setimg3("src/assets/bluetop.png")} style={{ backgroundColor: "#1E1E4C" }}></span>
-                        <span onClick={() => setimg3("src/assets/sandaltop.png")} style={{ backgroundColor: "#E0D8C8" }}></span>
+                        <span onClick={() => setimg3(hatImages.blackbalmoral)} style={{ backgroundColor: "#000000" }}></span>
+                        <span onClick={() => setimg3(hatImages.bluetop)} style={{ backgroundColor: "#1E1E4C" }}></span>
+                        <span onClick={() => setimg3(hatImages.sandaltop)} style={{ backgroundColor: "#E0D8C8" }}></span>
                     </div>
                 </div></div>
             <div className='item5' onMouseEnter={() => setOver3(true)} onMouseLeave={() => setOver3(false)}><img src={img4} alt="" width={"100%"} />
@@ -59,9 +75,9 @@ export default function HatAndTshirts() {
                     <p>Oakwood Longsleeve<br />
 $140.00 USD</p>
                     <div className='colors'>
-                        <span onClick={() => setimg4("src/assets/blackfullhand.png")} style={{ backgroundColor: "#000000" }}></span>
-                        <span onClick={() => setimg4("src/assets/bluefullhand.png")} style={{ backgroundColor: "#1E1E4C" }}></span>
-                        <span onClick={() => setimg4("src/assets/sandalfullhand.png")} style={{ backgroundColor: "#E0D8C8" }}></span>
+                        <span onClick={() => setimg4(hatImages.blackfullhand)} style={{ backgroundColor: "#000000" }}></span>
+                        <span onClick={() => setimg4(hatImages.bluefullhand)} style={{ backgroundColor: "#1E1E4C" }}></span>
+                        <span onClick={() => setimg4(hatImages.sandalfullhand)} style={{ backgroundColor: "#E0D8C8" }}></span>
                     </div>
                 </div></div>
             <div className='item6'>

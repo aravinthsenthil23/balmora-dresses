@@ -1,5 +1,6 @@
 import '../css/about.css'
 import { useEffect,useRef } from 'react';
+import tailoringVideo from '../videos/tailoringVideo.mp4';
 export default function About(){
     const videoRef = useRef(null);
     
@@ -33,7 +34,7 @@ export default function About(){
                 <p>About Us</p>
                 <p>Balmoral was founded in Canada to create timeless garments shaped by the country’s distinct climate and way of life.</p>
             </div>
-            <video ref={videoRef} src="src/videos/tailoringVideo.mp4" muted
+            <video ref={videoRef} src={tailoringVideo} muted
         playsInline loop></video>
         </div>
     )

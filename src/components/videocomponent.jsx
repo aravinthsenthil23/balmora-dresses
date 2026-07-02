@@ -1,5 +1,6 @@
 import '../css/video.css'
 import { useEffect,useRef } from 'react';
+import runningVideo from '../videos/runningVideo.mp4';
 export default function VideoComponent() {
     const videoRef = useRef(null);
 
@@ -29,7 +30,7 @@ export default function VideoComponent() {
     }, []);
 
     return (
-        <video ref={videoRef} src="src\videos\runningVideo.mp4"  muted
+        <video ref={videoRef} src={runningVideo} muted
         playsInline
         className='running'>
 

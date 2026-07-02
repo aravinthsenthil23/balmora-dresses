@@ -4,25 +4,25 @@ export default function List() {
     const list = [{
         id:1,
         name: "Shipping & returns",
-        url: 'src/assets/boxs.jpg',
+        url: new URL('../assets/boxs.jpg', import.meta.url).href,
         desc: "Review our shipping and returns information"
     },
     {
         id:2,
         name: "Contact",
-        url: "src/assets/emailus.jpg",
+        url: new URL('../assets/emailus.jpg', import.meta.url).href,
         desc: "Email our team for all inquiries"
     },
     {
         id:3,
         name: "Lookbook",
-        url: "src/assets/girl.jpg",
+        url: new URL('../assets/girl.jpg', import.meta.url).href,
         desc: "Explore the Spring–Summer 26 Lookbook"
     },
     {   
         id:4,
         name: "Press",
-        url: "src/assets/pacesetters.jpg",
+        url: new URL('../assets/pacesetters.jpg', import.meta.url).href,
         desc: "Discover our selected features and mentions"
     }]
     return (
