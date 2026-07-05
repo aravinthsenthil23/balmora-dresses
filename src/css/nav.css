@@ -107,6 +107,12 @@ li > a {
     }
 }
 
+@media screen and (max-width:425px){
+    nav > p{
+        margin-left: 20px;
+    }
+}
+
 @media screen and (max-width:320px){
     nav > p{
         margin-left: 20px;
