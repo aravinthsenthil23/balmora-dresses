@@ -27,7 +27,6 @@
     /* transform: translateX(100%); Start off-screen */
     opacity: 1; /* Start invisible */
     scroll-behavior: none;
-    z-index: 999;
 }
 
 
@@ -70,7 +69,6 @@ li > a {
   transform: translateY(0);
 }
 
-/* Slide out of view (equal to navbar height) */
 .navbar.hide {
   transform: translateY(-300px); 
 }
@@ -93,7 +91,7 @@ li > a {
 }
 
 .menu-button{
-    display:none;
+    display: none;
 }
 @media screen and (max-width: 800px) {
     .hideOnMobile {

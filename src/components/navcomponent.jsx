@@ -45,14 +45,28 @@ export default function NavComponent() {
     }, [lastScrollY]);
 
 
-       function open_side_bar() {
-        document.querySelector('.nav-ul-mobile').style.display = 'flex';
-        document.querySelector('.menu-button').style.display = 'none';
+    function open_side_bar() {
+        if (window.innerWidth > 800) return;
+
+        const mobileMenu = document.querySelector('.nav-ul-mobile');
+        const menuButton = document.querySelector('.menu-button');
+
+        if (mobileMenu) mobileMenu.style.display = 'flex';
+        if (menuButton) menuButton.style.display = 'none';
     }
 
     function close_side_bar() {
-        document.querySelector('.nav-ul-mobile').style.display = 'none';
-        document.querySelector('.menu-button').style.display = 'block';
+        if (window.innerWidth > 800) {
+            const mobileMenu = document.querySelector('.nav-ul-mobile');
+            if (mobileMenu) mobileMenu.style.display = 'none';
+            return;
+        }
+
+        const mobileMenu = document.querySelector('.nav-ul-mobile');
+        const menuButton = document.querySelector('.menu-button');
+
+        if (mobileMenu) mobileMenu.style.display = 'none';
+        if (menuButton) menuButton.style.display = 'block';
     }
 
     function handleNavClick(event, sectionId) {
